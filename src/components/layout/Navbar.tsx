@@ -48,10 +48,10 @@ export function Navbar() {
           <Image
             src="/images/logo.png"
             alt="Sagely"
-            width={120}
-            height={40}
+            width={200}
+            height={68}
             className={cn(
-              'h-9 w-auto transition-all duration-300',
+              'h-14 w-auto transition-all duration-300',
               scrolled && 'brightness-0'
             )}
             priority
