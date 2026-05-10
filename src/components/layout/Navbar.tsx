@@ -45,14 +45,17 @@ export function Navbar() {
       >
         {/* Logo */}
         <Link href="/" className="flex items-center flex-shrink-0" aria-label="Sagely — Home">
-          <span
+          <Image
+            src="/images/logo.png"
+            alt="Sagely"
+            width={120}
+            height={40}
             className={cn(
-              'font-display font-bold text-xl md:text-2xl tracking-tight transition-colors duration-300',
-              scrolled ? 'text-primary-600' : 'text-white'
+              'h-9 w-auto transition-all duration-300',
+              !scrolled && 'brightness-0 invert'
             )}
-          >
-            Sagely
-          </span>
+            priority
+          />
         </Link>
 
         {/* Desktop Nav Links */}

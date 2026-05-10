@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { BookOpen, Clock, Globe, Award, MessageCircle, Users, CheckCircle, Star, ChevronRight } from 'lucide-react';
 import { WHATSAPP_URL } from '@/lib/utils';
+import { StatCounter } from '@/components/ui/StatCounter';
 
 export const metadata: Metadata = {
   title: 'Sagely — Trilingual Language Center in Tanger, Morocco',
@@ -87,13 +88,12 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1600&q=80"
+            src="/images/hero-bg.jpg"
             alt="Students learning at Sagely language center in Tanger Morocco"
             fill
             className="object-cover"
             priority
           />
-          {/* TODO: replace with real Sagely image */}
           <div className="absolute inset-0 bg-gradient-to-r from-primary-900/85 via-primary-800/70 to-primary-900/40" />
         </div>
 
@@ -130,12 +130,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="font-display font-bold text-4xl md:text-5xl text-gold-400 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-white/70 text-sm font-medium">{stat.label}</div>
-              </div>
+              <StatCounter key={stat.label} value={stat.number} label={stat.label} />
             ))}
           </div>
         </div>
