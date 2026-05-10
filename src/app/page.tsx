@@ -88,7 +88,7 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-bg.jpg"
+            src="/images/hero-bg.png"
             alt="Students learning at Sagely language center in Tanger Morocco"
             fill
             className="object-cover"
