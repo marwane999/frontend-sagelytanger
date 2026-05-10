@@ -19,6 +19,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://sagely.ma'),
   title: {
     default: 'Sagely — Trilingual Language Center in Tanger, Morocco',
     template: '%s | Sagely',
